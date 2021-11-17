@@ -28,14 +28,15 @@ int main() {
     printf("%s\n", gp);
 
 
+    /* 初始化随机数发生器 */
     time_t t;
-    time(&t);
+    srand(time(&t));
     printf("%ld\n", t);
 
-    /* 初始化随机数发生器 */
-    srand(t);
     for (int i = 0; i < 5; ++i) {
         printf("%d\n", rand() % 50);
     }
+
+//    server();
     return 0;
 }
